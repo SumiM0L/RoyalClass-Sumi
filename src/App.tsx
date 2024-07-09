@@ -1,26 +1,37 @@
+// src/App.tsx
 import React from 'react';
-import logo from './logo.svg';
+import {Routes } from 'react-router-dom';
+import HeaderFirst from './components/HeaderFirst';
+import Header from './components/Header';
+import Home from './pages/Home';
+import Today from './pages/Today';
+import Categories from './pages/Categories';
+import Thismonth from './pages/Thismonth';
+import Explore from './pages/Explore';
+import Featured from './pages/Featured';
+import Services from './pages/Services';
+import Footer from './pages/Footer';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeaderFirst/>
+      <Header/>
+      <Home/>
+      <Today/>
+      <Categories/>
+      <Thismonth/>
+      <Explore/>
+      <Featured/>
+      <Services/>
+      <Footer/>
+      
+      <Routes>
+        
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

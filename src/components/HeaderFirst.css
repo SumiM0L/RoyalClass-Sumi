@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.main-coontainer {
+    width: 100%;
+    height: fit-content;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+.text-one {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+    white-space: nowrap; /* Prevent text from breaking to new line */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .text-one {
+        font-size: 12px;
+    }
+    .language {
+        font-size: 12px;
+    }
+}

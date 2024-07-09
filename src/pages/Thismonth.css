@@ -1,0 +1,142 @@
+.today-container {
+    padding: 10px 75px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #DB4444;
+}
+
+.main-sale {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 40px;
+}
+
+.flashsale {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.viewbtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.viewbtn p {
+    padding: 10px 20px;
+    background-color: #DB4444;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.products-card {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.card {
+    flex: 0 0 auto;
+    position: relative;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icons {
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 200px;
+}
+
+.product-image img {
+    width: 100px;
+    height: 150px;
+}
+
+.image-hold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thisdescription {
+    text-align: start;
+}
+
+.description div {
+    margin-bottom: 10px;
+}
+
+.description span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.image-container {
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .products-card {
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        min-width: 180px;
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-sale {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .products-card {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        min-width: 160px;
+        max-width: 160px;
+    }
+}

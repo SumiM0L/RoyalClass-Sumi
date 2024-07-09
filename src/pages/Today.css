@@ -1,0 +1,181 @@
+.today-container {
+    padding: 20px 75px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #DB4444;
+}
+
+.main-sale {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 85px;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.sliderarrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sliderarrow img {
+    cursor: pointer;
+}
+
+.time-column {
+    display: flex;
+    align-items: center;
+}
+
+.flashsale {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.timeo {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.count {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.colon {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 10px;
+    color: #DB4444;
+}
+
+.card {
+    position: relative;
+    width: 270px;
+    height: 295px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #F5F5F5;
+}
+
+.card-text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #DB4444;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.icons span {
+    cursor: pointer;
+}
+
+.gamepad, .monitor, .chair, .keyboard {
+    margin: auto;
+    margin-top: 30px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.description div:first-child {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.description div span {
+    font-size: 14px;
+    color: #999;
+}
+
+.description img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.viewbtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.viewbtn p {
+    padding: 10px 20px;
+    background-color: #DB4444;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: black;
+    opacity: 20%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .main-sale {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .time-column {
+        margin-top: 10px;
+    }
+
+    .sliderarrow {
+        margin-top: 10px;
+    }
+}
