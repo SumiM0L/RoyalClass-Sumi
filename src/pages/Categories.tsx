@@ -1,19 +1,19 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Slider from 'react-slick';
-import axios from 'axios'; // Import Axios for API fetching
+import axios from 'axios'; 
 import arrowleft from "../assets/arrow-left.svg";
 import arrowright from "../assets/arrow-right.svg";
-import reactangleblock from "../assets/Rectangleblock.svg"; // Assuming this is imported
+import reactangleblock from "../assets/Rectangleblock.svg"; 
 
 function Categories() {
-  const sliderRef = useRef<any>(null); // Use any type assertion for sliderRef
-  const [categories, setCategories] = useState<any[]>([]); // Initialize with an empty array
+  const sliderRef = useRef<any>(null); 
+  const [categories, setCategories] = useState<any[]>([]); 
 
   const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 6, // Show 6 cards per row
+    slidesToShow: 6,
     slidesToScroll: 1,
     responsive: [
       {
@@ -75,7 +75,7 @@ function Categories() {
 
       <div className='slider-container'>
         <Slider ref={sliderRef} {...sliderSettings}>
-          {/* Map through categories and render each card */}
+          
           {categories && categories.map((category: any) => (
   <div key={category.id}>
     <div style={{marginLeft:"10px"}} className='cardc'>
