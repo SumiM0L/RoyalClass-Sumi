@@ -1,17 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Slider from 'react-slick';
+import axios from 'axios'; // Import Axios for API fetching
 import arrowleft from "../assets/arrow-left.svg";
 import arrowright from "../assets/arrow-right.svg";
-import phone from "../assets/phone.png";
-import computr from "../assets/computr.png";
-import smartwatch from "../assets/smartwatch.png";
-import camera from "../assets/camera.png";
-import headphone from "../assets/headphone.png";
-import gamee from "../assets/gamee.png";
-import reactangleblock from "../assets/Rectangleblock.svg"
+import reactangleblock from "../assets/Rectangleblock.svg"; // Assuming this is imported
 
 function Categories() {
-  const sliderRef = useRef<Slider>(null);
+  const sliderRef = useRef<any>(null); // Use any type assertion for sliderRef
+  const [categories, setCategories] = useState<any[]>([]); // Initialize with an empty array
 
   const sliderSettings = {
     dots: true,
@@ -35,15 +31,28 @@ function Categories() {
     ],
   };
 
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get('https://api.escuelajs.co/api/v1/categories');
+        setCategories(response.data);
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
   const nextSlide = () => {
-    if (sliderRef.current && typeof sliderRef.current.slickNext === 'function') {
-      sliderRef.current.slickNext();
+    if (sliderRef.current && typeof sliderRef.current?.slickNext === 'function') {
+      sliderRef.current?.slickNext();
     }
   };
 
   const prevSlide = () => {
-    if (sliderRef.current && typeof sliderRef.current.slickPrev === 'function') {
-      sliderRef.current.slickPrev();
+    if (sliderRef.current && typeof sliderRef.current?.slickPrev === 'function') {
+      sliderRef.current?.slickPrev();
     }
   };
 
@@ -66,47 +75,20 @@ function Categories() {
 
       <div className='slider-container'>
         <Slider ref={sliderRef} {...sliderSettings}>
-          {/* Card 1 */}
-          <div>
-            <div className='cardc'>
-              <img src={phone} alt='phone' />
-            </div>
-          </div>
+          {/* Map through categories and render each card */}
+          {categories && categories.map((category: any) => (
+  <div key={category.id}>
+    <div style={{marginLeft:"10px"}} className='cardc'>
+      <img
+        src={category.image}
+        alt={category.name}
+        onError={(e) => {
+        }}
+      />
+    </div>
+  </div>
+))}
 
-          {/* Card 2 */}
-          <div>
-            <div className='cardc'>
-              <img src={computr} alt='computer' />
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div>
-            <div className='cardc'>
-              <img src={smartwatch} alt='smartwatch' />
-            </div>
-          </div>
-
-          {/* Card 4 */}
-          <div>
-            <div className='cardc'>
-              <img src={camera} alt='camera' />
-            </div>
-          </div>
-
-          {/* Card 5 */}
-          <div>
-            <div className='cardc'>
-              <img src={gamee} alt='game' />
-            </div>
-          </div>
-
-          {/* Card 6 */}
-          <div>
-            <div className='cardc'>
-              <img src={headphone} alt='headphone' />
-            </div>
-          </div>
         </Slider>
       </div>
 
