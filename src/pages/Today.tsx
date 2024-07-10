@@ -17,13 +17,13 @@ import arrowleft from "../assets/arrow-left.svg"
 import arrowright from "../assets/arrow-right.svg"
 
 function Today() {
-  const sliderRef = useRef<Slider>(null); // Ensure ref is initialized with null
+  const sliderRef = useRef<Slider>(null); 
 
   const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4, // Show 4 cards per row
+    slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
       {
@@ -45,13 +45,13 @@ function Today() {
 
   const nextSlide = () => {
     if (sliderRef.current) {
-      sliderRef.current.slickNext(); // Check if sliderRef.current is defined
+      sliderRef.current.slickNext(); 
     }
   };
 
   const prevSlide = () => {
     if (sliderRef.current) {
-      sliderRef.current.slickPrev(); // Check if sliderRef.current is defined
+      sliderRef.current.slickPrev();
     }
   };
 

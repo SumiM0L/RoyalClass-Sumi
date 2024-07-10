@@ -9,8 +9,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    overflow: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .text-one {
@@ -20,7 +20,7 @@
     color: white;
     text-align: center;
     flex-grow: 1;
-    white-space: nowrap; /* Prevent text from breaking to new line */
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -31,7 +31,6 @@
     gap: 5px;
 }
 
-/* Ensure responsiveness */
 @media (max-width: 768px) {
     .text-one {
         font-size: 12px;
